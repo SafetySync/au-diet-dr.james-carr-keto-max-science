@@ -46,8 +46,23 @@
                         <div class="text-center">
                             <h2>EXCLUSIVE: Nobody had expected this discovery:<br>A talented student from Melbourne won Harvard's highest medical award for discovering a method to lose 31 kg in one month without dieting, weight training or gaining weight!</h2>
                         </div>
+						
+						<script>
+        function formatDateTime() {
+            var currentDate = new Date();		
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+            var formattedDateTime = currentDate.toLocaleDateString('en-GB', options);
+            document.getElementById('formatted-date-time').textContent = formattedDateTime;
+        }
+
+        // Call the formatDateTime function once the page is loaded
+        window.onload = function() {
+            formatDateTime();
+        };
+    </script>
+						
                         <div class="text">
-                            <p>Health News, 9 September 2023</p>
+                            <p>Health News, <span id="formatted-date-time"></span></p>
                         </div>
                         <hr>
                         <div class="text">
